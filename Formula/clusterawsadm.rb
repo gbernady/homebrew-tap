@@ -3,17 +3,17 @@ class Clusterawsadm < Formula
   homepage "https://github.com/kubernetes-sigs/cluster-api-provider-aws"
 
   checksums = {
-    "darwin-amd64" => "1a21bfe7a05d2706add5ad216622b1426670eacdbf1a6416af64550036bf8b59",
-    "darwin-arm64" => "882c2dc37c968d4bd703420abcf4af62e78622433609438d320d9551d8fc47f8",
-    "linux-amd64"  => "e2728c50ae811896478a004fb565693dc8432b6cb82b223ddd1a708192f029fb",
-    "linux-arm64"  => "fcec59a1fe2e968ced406b360011d113a0a9c9a0cf58403208fe83e270cad409",
+    "darwin-amd64" => "c8777db1f619d93f8970ddf4103b069c08acefd1952a1829b746aaad782ae997",
+    "darwin-arm64" => "d57a1e84f5a142796c02ceb38d24ad78c43468c4eb9d1b7f81ead1071bfb8e16",
+    "linux-amd64"  => "38554cfc4ff561b8ca29e57e3122002eee5168650a9feaf2c72233c0021bb80b",
+    "linux-arm64"  => "88a7ed74096b926c590f345aa47ecff7868cb05d9f1c0479aa5ea9f233de2b26",
   }
 
   os = OS.kernel_name.downcase
   arch = Hardware::CPU.intel? ? "amd64" : Hardware::CPU.arch.to_s
 
-  url "https://github.com/kubernetes-sigs/cluster-api-provider-aws/releases/download/v1.5.0/clusterawsadm-#{os}-#{arch}", using: :nounzip
-  version "1.5.0"
+  url "https://github.com/kubernetes-sigs/cluster-api-provider-aws/releases/download/v2.0.2/clusterawsadm-#{os}-#{arch}", using: :nounzip
+  version "2.0.2"
   sha256 checksums["#{os}-#{arch}"]
 
   license "Apache-2.0"
